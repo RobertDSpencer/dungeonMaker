@@ -1,0 +1,2 @@
+Name level constitution block evade reduce strength will dexterity skill negotiation charisma hostility
+GoblinLV1 1 30 3 3 4 3 0 3 3 0 5 10 HUMANOID

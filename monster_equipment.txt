@@ -1,0 +1,2 @@
+Name (slot1 not actually present in file) equipment1 percentage1 ect. ; (slot2 not actually present in file) equipment1 percentage2 ect. ;
+GoblinLV1 ShoddyKnife 65 ShoddyWarPick 25 ;
