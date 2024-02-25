@@ -23,7 +23,7 @@ class Mob:
         self.skills = []
         self.set_stats(self.name)
         if self.body_type == "HUMANOID":
-            self.slots = [["weapon"]]
+            self.slots = [["weapon"], ["off hand"], ["body"], ["legs"], ["head"]]
         else:
             self.slots = []
         self.set_equipment()
@@ -72,7 +72,7 @@ class Mob:
             print("Error: File 'monster_stats.txt' not found.")
             return
         except Exception as e:
-            print(f"An error occurred: {e}")
+            print(f"An error occurred in set_stats: {e}")
             return
 
     def set_skills(self):
@@ -88,7 +88,7 @@ class Mob:
             print("Error: File 'monster_skills.txt' not found.")
             return
         except Exception as e:
-            print(f"An error occurred: {e}")
+            print(f"An error occurred in set_skills: {e}")
             return
         for i in range(len(self.slots)):
             # extract the skills from the equipment
@@ -139,7 +139,7 @@ class Mob:
             print("Error: File 'monster_equipment.txt' not found.")
             return
         except Exception as e:
-            print(f"An error occurred: {e}")
+            print(f"An error occurred in set_equipment: {e}")
             return
 
 
