@@ -1,0 +1,83 @@
+The following is only for reference purpouses; it serves no function to the code, and modifying it will not change the
+sim in any way
+Name; description; Stat description; abilities; body type; equipment;
+
+*/*GOBLINOIDS*\*
+Goblinoids are vile, humanoid creatures, born of a mysterious substance called Soup. When the soup is fed with
+(preferably still living) organic matter, metals, or magic, new goblinoids can crawl out of the soup. The higher quality
+ingredients, the more powerful the goblinoids. Goblinoids often carry their pot of Soup with them, living nomadicly,
+only settling down when they find either a person or force that will provide protection and food for the Soup.
+Goblinoids only respect that which can protect the soup. They also often change appearance slightly based on what is fed
+into the soup. While goblinoid power varies greatly based on Soup quality, they come in three distinct castes. Goblins
+are the weakest and most common, only a little shorter than a human with no hair or outer ears. They have a ridge above
+their eyes and a solemn but violent disposition. They view their own lives as expendable, and will gladly sacrifice
+themselves to land a single scratch on a greater foe. After all, their bodies will be fed back to the soup, so they can
+be reborn. Hobgoblins are somewhat uncommon, and vary more greatly in form. However, they usually have horns of some
+sort, and stand at about the same height as an adult male human. They tend to get better weapons than goblins, and
+command the goblins under them with intensity and authority. Orcs are the pinnacle of goblinoid strength, born tall,
+horned, and muscular. They appear lazy at first blush, being carried most places by goblins, but they are simply
+conserving their incredible energy and strength for the battles where they are needed. Many an adventurer has perished
+from underestimating them. Goblins will usually wander undill protected by a "sponsor" like an ambitious wizard or king,
+but once a force of goblinoids has about six orcs, they will settle down near other established civilizations, and build
+their own. For scale, one hobgoblin commands about 100 goblins, and one orc commands about 10 Hobgoblins, so this force
+is about 6000 strong in goblins alone. Such an encampment will begin developing weapons and fortifications, making the
+goblinoids even more threatening.
+
+Goblin (LV1); A weak, but vile creature. Only has a weapon, if that; Stats are fairly balanced, with good teamwork and
+high hostility; Can use handheld weapons and throw a Shoddy punch; it is humanoid; it weilds a Shoddy knife, war pick,
+ or nothing.
+
+Goblin (LV2); A goblin that works under a Hobgoblin. Lightly armored and aggressive; Shoddy, but existing defences.
+Consistently armed, good teamwork; Can use handheld weapons, light armor and bucklers, and throw a Shoddy punch;
+humanoid; for defense, it has a wood buckler or leather cap. For offence, it has a war pick or flint spear.
+
+*/*MINIONS*\*
+A Minion is the most widely varying category of monster. They are inert matter brought to life by synthetic magic,
+meaning they never appear naturally. Just about every magic user can make them, though, so they crop up in unexpected
+places. All minions are crafted using a quality of the spell "Animation", and a specific amount of matter. For example,
+a casting of Shoddy Animation and about one cup of sand can create a sand minion. Or, on the other end, Perfect
+Animation can animate an adamantine statue that weighs about one pound (a bit over 3 cubic feet). Minions are not
+homogeneous, however. For example, the mater can usually be sculpted to match the form the animator desires, though some
+limitations may apply. Such limitations include that only relatively light materials can fly, and some materials are
+difficult to sculpt, like sand. No time limit exists for animated creatures, but commanding them is a different spell
+altogether, and can wear off, leading to large numbers of "rouge" minions wandering the world until they succumb to
+injuries. A minion can not be made any stronger than another of the same material, all differences are purely cosmetic.
+
+Sand minion; One of the weakest minions, one hit can usually destroy them. They look like slugs with glass teeth; No
+good stats, weak in all regards. Low hostility; Amorphous; no items
+
+*/*GEISTS*\*
+Geists are wayward thoughts that have taken on a life of their own. Either created accidentally through strong emotions,
+or intentionally by a magic user.The more powerful a geist is, the more it can manipulate, the smarter it is, and harder
+ to dispel it is. While weaker Geists can be safely ignored, the strongest geists have effects that necessitate
+ speedy removal. From weakest to strongest, there are seven geists which can control: dust, vibration, singular
+ items, many items, buildings, animals, people.
+
+ Staubgheist; a geist that can control dust; no good offence, but can only be destroyed by magic. Weak magic.
+ OUTRAGEOUSLY hostile; Amorphous; no items
+
+ */*DRAGONS*\*
+ The presence of a single dragon in an area fundamentally alters it. Dragons are living, breathing rifts in reality
+ between the mortal plane and an elemental plane. This of course allows what is otherwise a mere animal to summon
+ massive blasts of energy from an elemental plane in their signature "breath" attacks, and fly. The energy also corrupts
+ living things in the surrounding area into kobolds. People in the area become dragonborn, characterised by a cultish
+ reverence for the dragon. The iconic hordes of dragons are not collected by the beast itself; it is offered to it by
+ the dragonborn, and, to a lesser degree, the kobolds.
+
+*/*GIANTS*\*
+Giants are simply much larger versions of ordinary animals. They only appear when that animal is in it's "purest" state.
+For example, giant rats only appear in areas with lots to scavenge, giant humans only appear in cities, giant dragons
+only appear in the associated elemental plane. Some animals, like rats, are only dangerous when giant.
+
+Giant rat; a large, vicious rat. Territorial, not evil; high bulk, low defense. Possibly toxic bite; Amorphous; no items
+
+*/*WILD ANIMALS*\*
+Some monsters are wild animals, nothing more, nothing less.
+
+Wild Dogs; wild animals that call more allies with their cries when injured; high speed and evade, low other defensive
+stats; Amorphous; no items
+
+Monopod; A weird, single footed creature. Moves by hopping; Surprisingly high attack, everything else is pretty low.
+Easily distracted; Monopod; may wear a leather boot.
+
+Angry Mushroom; A hostile, walking mushroom; Bulky and sturdy. Can be convinced; Amorphous; No items
