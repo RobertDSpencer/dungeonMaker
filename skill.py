@@ -62,7 +62,7 @@ class Skill:
             print("Error: File 'skills.txt' not found.")
             return
         except Exception as e:
-            print(f"An error occurred: {e}")
+            print(f"An error occurred in skills: {e}")
             return
 
     def get_effects(self):

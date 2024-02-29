@@ -38,5 +38,5 @@ class Equippable:
             print("Error: File 'equipment.txt' not found.")
             return
         except Exception as e:
-            print(f"An error occurred: {e}")
+            print(f"An error occurred in equippable: {e}")
             return

@@ -5,23 +5,8 @@ import random
 
 
 class Mob:
-    def __init__(self, name="vapor", level=0, constitution=0, block=0, evade=0, reduce=0, strength=0, will=0,
-                 dexterity=0, skill=0, negotiation=0, charisma=0, hostility=0, body_type="AMORPHOUS"):
+    def __init__(self, name="vapor"):
         self.name = name
-        self.hostility = hostility
-        self.charisma = charisma
-        self.negotiation = negotiation
-        self.skill = skill
-        self.dexterity = dexterity
-        self.will = will
-        self.strength = strength
-        self.reduce = reduce
-        self.evade = evade
-        self.block = block
-        self.level = level
-        self.constitution = constitution
-        self.body_type = body_type
-        self.speed = 0
         self.skills = []
         self.set_stats(self.name)
         if self.body_type == "HUMANOID":
@@ -155,4 +140,3 @@ def test():
     print(test_goblin)
 
 
-test()
