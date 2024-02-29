@@ -17,11 +17,11 @@ sort, and stand at about the same height as an adult male human. They tend to ge
 command the goblins under them with intensity and authority. Orcs are the pinnacle of goblinoid strength, born tall,
 horned, and muscular. They appear lazy at first blush, being carried most places by goblins, but they are simply
 conserving their incredible energy and strength for the battles where they are needed. Many an adventurer has perished
-from underestimating them. Goblins will usually wander undill protected by a "sponsor" like an ambitious wizard or king,
-but once a force of goblinoids has about six orcs, they will settle down near other established civilizations, and build
-their own. For scale, one hobgoblin commands about 100 goblins, and one orc commands about 10 Hobgoblins, so this force
-is about 6000 strong in goblins alone. Such an encampment will begin developing weapons and fortifications, making the
-goblinoids even more threatening.
+from underestimating them. Goblins will usually wander untill protected by a "sponsor" like an ambitious wizard or king,
+but once a force of goblinoids has about twelve orcs, with a thirteenth as orc leader, they will settle down near other
+established civilizations, and build their own. For scale, one hobgoblin commands about 10 goblins, and one orc commands
+about 10 Hobgoblins, so this force is about 1200 strong in goblins alone. Such an encampment will begin developing
+weapons and fortifications, making the goblinoids even more threatening.
 
 Goblin (LV1); A weak, but vile creature. Only has a weapon, if that; Stats are fairly balanced, with good teamwork and
 high hostility; Can use handheld weapons and throw a Shoddy punch; it is humanoid; it weilds a Shoddy knife, war pick,
@@ -30,6 +30,11 @@ high hostility; Can use handheld weapons and throw a Shoddy punch; it is humanoi
 Goblin (LV2); A goblin that works under a Hobgoblin. Lightly armored and aggressive; Shoddy, but existing defences.
 Consistently armed, good teamwork; Can use handheld weapons, light armor and bucklers, and throw a Shoddy punch;
 humanoid; for defense, it has a wood buckler or leather cap. For offence, it has a war pick or flint spear.
+
+Hobgoblin (LV5); A charismatic tactician and leader of goblins. Commands the goblins near him with ruthless efficiency;
+Great charisma, okay defense and good offense. Has okay armor and weapon; Makes the goblins near it more skilled, uses a
+war pick; humanoid; it weilds a tarnished war pick, a degraded leather vest, a Shoddy leather cap, and a shoddy wooden
+buckler
 
 */*MINIONS*\*
 A Minion is the most widely varying category of monster. They are inert matter brought to life by synthetic magic,

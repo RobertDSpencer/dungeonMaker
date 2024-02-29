@@ -6,11 +6,25 @@ import random
 
 class Mob:
     def __init__(self, name="vapor"):
+        self.body_type = None
+        self.speed = None
+        self.hostility = None
+        self.charisma = None
+        self.negotiation = None
+        self.skill = None
+        self.dexterity = None
+        self.will = None
+        self.strength = None
+        self.reduce = None
+        self.evade = None
+        self.block = None
+        self.constitution = None
+        self.level = None
         self.name = name
         self.skills = []
         self.set_stats(self.name)
         if self.body_type == "HUMANOID":
-            self.slots = [["weapon"], ["off hand"], ["body"], ["legs"], ["head"]]
+            self.slots = [["weapon"], ["off_hand"], ["body"], ["legs"], ["head"]]
         elif self.body_type == "MONOPOD":
             self.slots = [["Shoe"]]
         elif self.body_type == "AMORPHOUS":
@@ -133,10 +147,3 @@ class Mob:
         except Exception as e:
             print(f"An error occurred in set_equipment: {e}")
             return
-
-
-def test():
-    test_goblin = Mob("GoblinLV1")
-    print(test_goblin)
-
-

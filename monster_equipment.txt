@@ -1,3 +1,5 @@
 Name (slot1) equipment1 percentage1 ect. ; (slot2) equipment1 percentage1 ect. ;
 GoblinLV1 ShoddyKnife 65 ShoddyWarPick 25 ; ; ; ; ;
+GoblinLV2 ShoddyWarPick 85 DegradedFlintSpear 15 ; ShoddyWoodBuckler 25 ; ; ; ShoddyLeatherCap 45 ;
+HobgoblinLV5 TarnishedWarPick 100 ; ShoddyWoodBuckler 100 ; ShoddyLeatherVest 100 ; ; ShoddyLeatherCap 100 ;
 Monopod ShoddyLeatherShoe 25 ;

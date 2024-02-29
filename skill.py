@@ -4,7 +4,7 @@ from named_effect import NamedEffect
 
 # these are the named effects; special effects that do something hard-coded instead of modifying a stat. Examples
 # include status effects and calling for help
-named_effects = ["Plague", "DogCry", "Incorporeal", "Nuisance"]
+named_effects = ["Plague", "CallWildDog", "Incorporeal", "Nuisance", "Gag"]
 
 
 def count_semicolons(parts):

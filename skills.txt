@@ -4,7 +4,13 @@ ShoddyPunch 10 N 1
 ShoddyStab 15 N 1
 ShoddyPuncture 10 N 1 SKL + 1 Pt ;
 +1RED 0 Y 0 RED + 1 ;
++1BLK 0 Y 0 BLK + 1 ;
 ShoddyKick 5 N 1
 ShoddyGnaw 10 N 1 Plague Shoddy ;
 ShoddyNeedles 15 N 1
-
+ShoddyBite 15 N 1
+PainCry 0 N 0 CallWildDog Average;
+Incorporeal 0 Y 0 Incorporeal Average ;
+Nuisance 0 Y 0 Nuisance Average ;
+ShoddyDustBlast 5 N 3 Gag Shoddy ;
+DegradedLance 15 N 2

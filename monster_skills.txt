@@ -1,6 +1,9 @@
 Name Skill1 Skill2 ect.
 GoblinLV1 ShoddyPunch
+GoblinLV2 ShoddyPunch
+HobgoblinLV5 ShoddyPunch ShoddySquadTactics
 Monopod ShoddyKick
 GiantRat ShoddyGnaw
+WildDog ShoddyBite PainCry
 SandMinion ShoddyNeedles
 Staubgheist ShoddyDustBlast Incorporeal Nuisance

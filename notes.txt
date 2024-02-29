@@ -1,4 +1,4 @@
 quality levels: Shoddy Degraded Tarnished Average Quality Exceptional Perfect
 body types:
 Amorphous: no equips
-Humanoid: weapon
+Humanoid: weapon off_hand body legs head
