@@ -1,6 +1,11 @@
 # a skill that is either active or passive. it changes stats and/or launches an attack when activated.
 from effect import Effect
+from named_effect import NamedEffect
 
+
+# these are the named effects; special effects that do something hard-coded instead of modifying a stat. Examples
+# include status effects and calling for help
+named_effects = ["Plague", "DogCry"]
 
 class Skill:
     def __init__(self, name=""):
@@ -46,10 +51,13 @@ class Skill:
                         # the 4 initial data points, divided by 5 for each of the five parts of a skill
                         # (stat, direction, amount, pointsOrPercent, and semicolon)
                         while i < ability_num:
-                            self.effects.append(Effect(parts[3 + i * 5], parts[4 + i * 5], parts[5 + i * 5], parts[6 + i
-                                                                                                                   * 5])
-                                                )
+                            if parts[3 + i * 5] in named_effects:
+                                self.effects.append(NamedEffect([3 + i * 5], parts[4 + i * 5]))
+                            else:
+                                self.effects.append(Effect(parts[3 + i * 5], parts[4 + i * 5], parts[5 + i * 5], parts[6
+                                                                                                            + i* 5]))
                             i += 1
+            file.close()
         except FileNotFoundError:
             print("Error: File 'skills.txt' not found.")
             return

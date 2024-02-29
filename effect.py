@@ -1,4 +1,4 @@
-# an effect applied by an equippable
+# an effect applied by an equippable or skill
 class Effect:
     def __init__(self, stat="STR", direction="+/-", amount=0, pointsOrPercent="Pt/%"):
         self.stat = stat

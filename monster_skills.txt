@@ -1,2 +1,4 @@
 Name Skill1 Skill2 ect.
 GoblinLV1 ShoddyPunch
+Monopod ShoddyKick
+GiantRat ShoddyGnaw

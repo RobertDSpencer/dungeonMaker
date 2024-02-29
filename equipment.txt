@@ -1,3 +1,4 @@
 name price slot skill1 skill2 ect...
 ShoddyKnife 1 weapon ShoddyStab
 ShoddyWarPick 3 weapon ShoddyPuncture
+ShoddyLeatherShoe 1 shoe +1RED

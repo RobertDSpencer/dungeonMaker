@@ -3,6 +3,7 @@ from equippable import Equippable
 from skill import Skill
 import random
 
+
 class Mob:
     def __init__(self, name="vapor", level=0, constitution=0, block=0, evade=0, reduce=0, strength=0, will=0,
                  dexterity=0, skill=0, negotiation=0, charisma=0, hostility=0, body_type="AMORPHOUS"):
@@ -20,15 +21,19 @@ class Mob:
         self.level = level
         self.constitution = constitution
         self.body_type = body_type
+        self.speed = 0
         self.skills = []
         self.set_stats(self.name)
         if self.body_type == "HUMANOID":
             self.slots = [["weapon"], ["off hand"], ["body"], ["legs"], ["head"]]
+        elif self.body_type == "MONOPOD":
+            self.slots = [["Shoe"]]
+        elif self.body_type == "AMORPHOUS":
+            self.slots = []
         else:
             self.slots = []
         self.set_equipment()
         self.set_skills()
-
 
     def __str__(self):
         output = self.name + "\n"
@@ -38,7 +43,7 @@ class Mob:
         output += "STR: " + str(self.strength) + " WIL: " + str(self.will) + "\n"
         output += "DEX: " + str(self.dexterity) + " SKL: " + str(self.skill) + "\n"
         output += "CHA: " + str(self.charisma) + " NEG: " + str(self.negotiation) + "\n"
-        output += "HOS: " + str(self.hostility) + "\n"
+        output += "HOS: " + str(self.hostility) + " SPD: " + str(self.speed) + "\n"
         for i in range(len(self.skills)):
             specefic_skill = self.skills[i]
             output += specefic_skill.get_name()
@@ -64,7 +69,8 @@ class Mob:
                         self.negotiation = int(parts[10])
                         self.charisma = int(parts[11])
                         self.hostility = int(parts[12])
-                        self.body_type = parts[13]
+                        self.speed = int(parts[13])
+                        self.body_type = parts[14]
                         return
                 print(f"Monster '{name}' not found.")
                 return
@@ -83,7 +89,8 @@ class Mob:
                     parts = line.strip().split()
                     if parts[0] == self.name:
                         for i in range(len(parts) - 1):
-                            self.skills.append(Skill(parts[i+1]))
+                            self.skills.append(Skill(parts[i + 1]))
+            file.close()
         except FileNotFoundError:
             print("Error: File 'monster_skills.txt' not found.")
             return
@@ -110,11 +117,11 @@ class Mob:
                             while True:  # while we don't see a semicolon
                                 j += 1
 
-                                  # tallies up the percentages of the possible items;
+                                # tallies up the percentages of the possible items;
                                 # this is so "no item" can have the proper percentage.
                                 if parts[j] != ";":
-                                    possibilities.append([parts[j], int(parts[j+1])])
-                                    percent_tally += int(parts[j+1])
+                                    possibilities.append([parts[j], int(parts[j + 1])])
+                                    percent_tally += int(parts[j + 1])
                                     j += 1
                                 else:
                                     break  # semicolon is the break char. It means no more items are possible
@@ -141,7 +148,6 @@ class Mob:
         except Exception as e:
             print(f"An error occurred in set_equipment: {e}")
             return
-
 
 
 def test():

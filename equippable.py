@@ -32,6 +32,7 @@ class Equippable:
                         parts = parts[3:]
                         for i in range(len(parts)):
                             self.skills.append(Skill(parts[i]))
+            file.close()
 
         except FileNotFoundError:
             print("Error: File 'equipment.txt' not found.")

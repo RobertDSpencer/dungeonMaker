@@ -3,3 +3,6 @@ Push 10 N DEX - 50 % ; SKL - 50 % ;
 ShoddyPunch 10 N 1
 ShoddyStab 15 N 1
 ShoddyPuncture 10 N 1 SKL + 1 Pt ;
++1RED 0 Y 0 RED + 1;
+ShoddyKick 5 N 1
+ShoddyGnaw 10 N 1 Plague Shoddy;
