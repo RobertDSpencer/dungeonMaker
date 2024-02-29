@@ -1,16 +1,17 @@
-Name power Y/Npassive range effect ; effect ;
-Push 10 N DEX - 50 % ; SKL - 50 % ;
-ShoddyPunch 10 N 1
-ShoddyStab 15 N 1
-ShoddyPuncture 10 N 1 SKL + 1 Pt ;
-+1RED 0 Y 0 RED + 1 ;
-+1BLK 0 Y 0 BLK + 1 ;
-ShoddyKick 5 N 1
-ShoddyGnaw 10 N 1 Plague Shoddy ;
-ShoddyNeedles 15 N 1
-ShoddyBite 15 N 1
-PainCry 0 N 0 CallWildDog Average;
-Incorporeal 0 Y 0 Incorporeal Average ;
-Nuisance 0 Y 0 Nuisance Average ;
-ShoddyDustBlast 5 N 3 Gag Shoddy ;
-DegradedLance 15 N 2
+Name power Y/Npassive range target effect ; effect ;
+Push 10 N 1 1 DEX - 50 % ; SKL - 50 % ;
+ShoddyPunch 10 N 1 1
+ShoddyStab 15 N 1 1
+ShoddySquadTactics 0 N 3 5 TacticalAdvantage Shoddy;
+ShoddyPuncture 10 N 1 1 SKL + 1 Pt ;
++1RED 0 Y 0 1 RED + 1 ;
++1BLK 0 Y 0 1 BLK + 1 ;
+ShoddyKick 5 N 1 1
+ShoddyGnaw 10 N 1 1 Plague Shoddy ;
+ShoddyNeedles 15 N 1 1
+ShoddyBite 15 N 1 1
+PainCry 0 N 0 1 CallWildDog Average;
+Incorporeal 0 Y 0 1 Incorporeal Average ;
+Nuisance 0 Y 0 1 Nuisance Average ;
+ShoddyDustBlast 5 N 3 1 Gag Shoddy ;
+DegradedLance 15 N 2 1

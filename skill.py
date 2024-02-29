@@ -4,7 +4,7 @@ from named_effect import NamedEffect
 
 # these are the named effects; special effects that do something hard-coded instead of modifying a stat. Examples
 # include status effects and calling for help
-named_effects = ["Plague", "CallWildDog", "Incorporeal", "Nuisance", "Gag"]
+named_effects = ["Plague", "CallWildDog", "Incorporeal", "Nuisance", "Gag", "TacticalAdvantage"]
 
 
 def count_semicolons(parts):
@@ -21,6 +21,7 @@ class Skill:
         self.power = 0
         self.passive = False
         self.hit_range = 0
+        self.targets = 0  # if targets remains 0, it can target as many times as there are available targets.
         self.effects = []
         # get the data from skills.txt
         self.set_data()
@@ -55,8 +56,9 @@ class Skill:
                             print("ERROR!" + self.name + " has an incorrect passive value.")
                             return
                         self.hit_range = parts[3]
+                        self.targets = parts[4]
                         i = 0  # which effect are we on?
-                        j = 4  # which part of parts are we on? Starts at 3
+                        j = 5  # which part of parts are we on? Starts at 5
                         effect_num = count_semicolons(parts)  # the number of semicolons is the number of effects
                         while i < effect_num:
                             if parts[j] in named_effects:

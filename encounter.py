@@ -13,7 +13,7 @@ chapel_confrontation = [Mob("HobgoblinLV5"), Mob("GoblinLV1"), Mob("GoblinLV1"),
                         Mob("GoblinLV1")]
 custom_encounter_splash = ["You encounter a lone pair of goblins! One of them flees to raise the alarm, and the other"
                            " turns to fight!", "You have come up on the hobgoblin and five goblins! \"Protect the Soup!"
-                                              "\" the hobgoblin bellows"]
+                                               "\" the hobgoblin bellows"]
 custom_encounters = [first_guard, chapel_confrontation]
 custom_encounter_names = ["first_guard", "chapel_confrontation"]
 
