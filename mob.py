@@ -67,7 +67,7 @@ class Mob:
             return
 
     def set_skills(self):
-        self.skills.append(Skill("push"))
+        self.skills.append(Skill("Push"))
         try:  # add the monster's innate skills
             with open('monster_skills.txt', 'r') as file:
                 for line in file:

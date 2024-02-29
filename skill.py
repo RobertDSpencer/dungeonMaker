@@ -2,10 +2,18 @@
 from effect import Effect
 from named_effect import NamedEffect
 
-
 # these are the named effects; special effects that do something hard-coded instead of modifying a stat. Examples
 # include status effects and calling for help
-named_effects = ["Plague", "DogCry"]
+named_effects = ["Plague", "DogCry", "Incorporeal", "Nuisance"]
+
+
+def count_semicolons(parts):
+    semicolon_count = 0
+    for string in parts:
+        if isinstance(string, str) and ';' in string:
+            semicolon_count += 1
+    return semicolon_count
+
 
 class Skill:
     def __init__(self, name=""):
@@ -33,6 +41,7 @@ class Skill:
 
     def set_data(self):
         try:
+            name = self.name
             with open('skills.txt', 'r') as file:
                 for line in file:
                     parts = line.strip().split()
@@ -46,17 +55,18 @@ class Skill:
                             print("ERROR!" + self.name + " has an incorrect passive value.")
                             return
                         self.hit_range = parts[3]
-                        i = 0
-                        ability_num = (len(parts) - 4) / 5  # the number of abilities is the length of the parts minus
-                        # the 4 initial data points, divided by 5 for each of the five parts of a skill
-                        # (stat, direction, amount, pointsOrPercent, and semicolon)
-                        while i < ability_num:
-                            if parts[3 + i * 5] in named_effects:
-                                self.effects.append(NamedEffect([3 + i * 5], parts[4 + i * 5]))
+                        i = 0  # which effect are we on?
+                        j = 4  # which part of parts are we on? Starts at 3
+                        effect_num = count_semicolons(parts)  # the number of semicolons is the number of effects
+                        while i < effect_num:
+                            if parts[j] in named_effects:
+                                self.effects.append(NamedEffect(parts[j], parts[j + 1]))
+                                j += 3
                             else:
-                                self.effects.append(Effect(parts[3 + i * 5], parts[4 + i * 5], parts[5 + i * 5], parts[6
-                                                                                                            + i* 5]))
+                                self.effects.append(Effect(parts[j], parts[j + 1], parts[j + 2], parts[j + 3]))
+                                j += 4
                             i += 1
+                        break
             file.close()
         except FileNotFoundError:
             print("Error: File 'skills.txt' not found.")
@@ -70,3 +80,5 @@ class Skill:
 
     def get_name(self):
         return self.name
+
+
