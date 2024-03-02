@@ -40,6 +40,34 @@ class Floor:
             for j in range(self.rooms):
                 self.passage_array[i].append(0)
 
+    def find_partitions(self):  # finds the partitions in the map, returns them in an array
+        output_array = []
+        # a breadth-first search
+        # First, let's define all the nodes in an array
+        nodes = []
+        for i in range(self.rooms):
+            nodes.append(i)
+        partitions = []  # nodes will be removed from nodes and added to partitions
+        current_partition = 0
+        queued_nodes = []
+        while len(nodes) > 0:  # while nodes remain in the nodes array...
+            queued_nodes.append(nodes[0])  # add the first node to the que
+            partitions.append([nodes[0]])  # add the first node to the current partition
+            nodes.pop(0)  # remove the first node from nodes
+            while len(queued_nodes) > 0:
+                neighbors = self.passage_array[queued_nodes[0]]
+                for i in range(len(neighbors)):
+                    if neighbors[i] == 1:  # if the neighbor exists...
+                        if i not in partitions[current_partition] and i in nodes:  # and isn't already in this partition
+                            partitions[current_partition].append(i)  # add it to the partition
+                            queued_nodes.append(i)  # add it to the que
+                            nodes.remove(i)  # remove it from the nodes list
+                queued_nodes.pop(0)
+            current_partition += 1  # move onto the next partition (if possible)
+
+        output_array = partitions
+        return output_array
+
     def generate_passages_first(self):  # generates the minimum number of passages
         vertices = self.rooms
         min_passages = vertices - 1
@@ -56,8 +84,6 @@ class Floor:
             self.passage_array[origin_point][end_point] = 1
             self.passage_array[end_point][origin_point] = 1  # the conection goes both ways, so two options are set to 1
 
-
-
     def new_floor_entrance(self, entrance=Staircase()):  # adds the floor's entrance point,
         # to move to the previous floor
         entrance.set_room_to(1)  # sets the endpoint of this floor's entrance to the first room
@@ -69,7 +95,8 @@ class Floor:
 
 
 def test():
-    test_floor = Floor("TestFloor", 6)
+    test_floor = Floor("TestFloor", 20)
+    print("The partitions are: " + str(test_floor.find_partitions()))
     graph = view_floor.graph_from_matrix(test_floor.passage_array)
     view_floor.display_graph(graph)
 
