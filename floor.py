@@ -31,6 +31,7 @@ class Floor:
         # between vertices (rooms).
         self.passage_array_populate()
         self.generate_passages_first()
+        self.unify_partitions()
         self.floor_traversal = floor_traversal  # an array of stair objects that take the party between floors.
 
     def passage_array_populate(self):  # populates the passage array with 0s (no connection)
@@ -68,6 +69,17 @@ class Floor:
         output_array = partitions
         return output_array
 
+    def unify_partitions(self):
+        partitions = self.find_partitions()
+        for i in range(len(partitions) - 1):  # to connect the partitions, we n-1 connections, e.g., 1 for 2 parts
+            part_from = partitions[i]
+            part_to = partitions[i + 1]
+            room_from = part_from[random.randint(0, len(part_from)-1)]
+            room_to = part_to[random.randint(0, len(part_to)-1)]  # the two rooms that will be connected.
+            self.passage_array[room_from][room_to] = 1
+            self.passage_array[room_to][room_from] = 1  # sets the connecting passages to 1
+
+
     def generate_passages_first(self):  # generates the minimum number of passages
         vertices = self.rooms
         min_passages = vertices - 1
@@ -96,9 +108,5 @@ class Floor:
 
 def test():
     test_floor = Floor("TestFloor", 20)
-    print("The partitions are: " + str(test_floor.find_partitions()))
     graph = view_floor.graph_from_matrix(test_floor.passage_array)
     view_floor.display_graph(graph)
-
-
-test()
