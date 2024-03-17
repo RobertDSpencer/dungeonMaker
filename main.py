@@ -1,7 +1,8 @@
+import view_floor
 from player_character import PlayerCharacter
 from DungeonObj import Dungeon
 
-input_commands = ["up", "down", "quit"]
+input_commands = ["up", "down", "quit", "map"]
 
 
 def check_user_input(user_input: str):
@@ -68,6 +69,10 @@ def explore_dungeon(exp_player: PlayerCharacter, exp_dungeon: Dungeon):
                     exp_player.room = goto[1]
                 else:
                     print("There is no staircase leading down.")
+            elif user_input == "map":
+                print("You check your trusty map. (close it to continue)")
+                floor_map = view_floor.graph_from_matrix(exp_dungeon.floors[current_floor].passage_array)
+                view_floor.display_graph(floor_map)
             elif user_input == "quit":
                 print("Goodbye!")
                 break
@@ -77,14 +82,17 @@ def explore_dungeon(exp_player: PlayerCharacter, exp_dungeon: Dungeon):
             user_input = int(user_input)
             if user_input == exp_player.room:
                 print("You're already here.")
+            elif user_input >= len(current_passages):
+                print("There is no passage to room #" + str(user_input) + " here.")
             elif current_passages[user_input] == 1:
                 print("You go to room " + str(user_input))
                 exp_player.room = user_input
             elif current_passages[user_input] == 0:
-                print("There is no passage to room #" + str(user_input))
+                print("There is no passage to room #" + str(user_input) + " here.")
+        print("\n")
 
 
 if __name__ == '__main__':
     hiking_dungeon = Dungeon("Short Hike", 5, 10)
-    player = PlayerCharacter("Lukas", 0, 0)
+    player = PlayerCharacter("Lucas", 0, 0)
     explore_dungeon(player, hiking_dungeon)
