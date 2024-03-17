@@ -74,11 +74,10 @@ class Floor:
         for i in range(len(partitions) - 1):  # to connect the partitions, we n-1 connections, e.g., 1 for 2 parts
             part_from = partitions[i]
             part_to = partitions[i + 1]
-            room_from = part_from[random.randint(0, len(part_from)-1)]
-            room_to = part_to[random.randint(0, len(part_to)-1)]  # the two rooms that will be connected.
+            room_from = part_from[random.randint(0, len(part_from) - 1)]
+            room_to = part_to[random.randint(0, len(part_to) - 1)]  # the two rooms that will be connected.
             self.passage_array[room_from][room_to] = 1
             self.passage_array[room_to][room_from] = 1  # sets the connecting passages to 1
-
 
     def generate_passages_first(self):  # generates the minimum number of passages
         vertices = self.rooms
@@ -98,15 +97,16 @@ class Floor:
 
     def new_floor_entrance(self, entrance=Staircase()):  # adds the floor's entrance point,
         # to move to the previous floor
-        entrance.set_room_to(1)  # sets the endpoint of this floor's entrance to the first room
+        entrance.set_room_to(0)  # sets the endpoint of this floor's entrance to the first room
         self.floor_traversal.append(entrance)
 
     def new_floor_exit(self, egress: Staircase):  # adds the floor's exit, to move to the next floor
-        egress.set_room_from(self.rooms)  # sets the origin of this floor's exit to the last room.
+        egress.set_room_from(self.rooms - 1)  # sets the origin of this floor's exit to the last room.
         self.floor_traversal.append(egress)
 
 
-def test():
+
+def test_f():
     test_floor = Floor("TestFloor", 20)
     graph = view_floor.graph_from_matrix(test_floor.passage_array)
     view_floor.display_graph(graph)

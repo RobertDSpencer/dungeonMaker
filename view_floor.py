@@ -29,7 +29,7 @@ def display_graph(graph):
     plt.show()
 
 
-def test():
+def test_viewer():
     begin_array = [[0, 1, 1, 0, 0, 0],
                    [1, 0, 1, 1, 0, 0],
                    [1, 1, 0, 0, 0, 1],

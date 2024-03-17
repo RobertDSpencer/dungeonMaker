@@ -16,3 +16,9 @@ class Staircase:
     def set_room_from(self, new_from):
         self.room_from = new_from
 
+    def get_from(self):
+        return [self.floor_from, self.room_from]
+
+    def get_to(self):
+        return [self.floor_to, self.room_to]
+

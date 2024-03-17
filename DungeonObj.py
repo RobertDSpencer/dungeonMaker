@@ -1,6 +1,7 @@
 # encompasses the whole dungeon; floors, monsters, traps, hazards and loot
 from floor import Floor
 from stairs import Staircase
+import view_floor
 
 
 class Dungeon:
@@ -10,8 +11,9 @@ class Dungeon:
         self.level = level
         self.floors = []
         self.stairs = self.stair_generation(stairs)
-        for i in range(self.depth+1):  # there is a floor 0 that is just the entrance.
+        for i in range(self.depth + 1):  # there is a floor 0 that is just the entrance.
             self.new_floor(i)  # generates a new floor for the dungeon at a depth of i
+        self.endpoint = [self.floors[len(self.floors) - 1].rooms, self.depth]  # room, floor
 
     def __str__(self):
         output = ("This is the dungeon of " + str(self.name) + ". It boasts " + str(
@@ -21,12 +23,13 @@ class Dungeon:
             output += "\n" + str(self.stairs[i])
         return output
 
+
     def new_floor(self, floor_num):  # TODO flesh out floor creation
         # the floor_num is which floor number this floor is. It also serves as the number of rooms -1
         # (e.g., floor 0 has 1 room, floor 10 has 11 rooms)
         new_floor = Floor("This floor #" + str(floor_num), floor_num + 1, floor_num, self.level)
         if floor_num > 0:  # the first floor (floor 0) has no entrance; it is the entrance.
-            new_floor.new_floor_entrance(self.stairs[floor_num-1])
+            new_floor.new_floor_entrance(self.stairs[floor_num - 1])
         if floor_num < self.depth:  # the last floor does not have an exit, it is the end
             new_floor.new_floor_exit(self.stairs[floor_num])
         self.floors.append(new_floor)
@@ -43,8 +46,7 @@ class Dungeon:
 
 
 def test_dungeon():
-    test = Dungeon("test", 3, 10)
-    print(test)
-
-
-test_dungeon()
+    test = Dungeon("test", 5, 10)
+    for i in range(len(test.floors)):
+        graph = view_floor.graph_from_matrix(test.floors[i].passage_array)
+        view_floor.display_graph(graph)
